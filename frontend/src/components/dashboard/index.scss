@@ -1,0 +1,35 @@
+.page-content-area {
+    .ant-skeleton-content .ant-skeleton-title,
+    .ant-skeleton-content .ant-skeleton-paragraph > li {
+        background: #d0cfcf;
+    }
+    .ant-skeleton-content .ant-skeleton-title + .ant-skeleton-paragraph {
+        padding: 0px;
+    }
+    .overall-stats {
+        margin: 32px 0px;
+        text-align: center;
+        .num {
+            font-size: 35px;
+            font-weight: bold;
+            color: #2b2d35;
+            text-transform: uppercase;
+        }
+        .ant-row > div { 
+            border-left: 1px solid #d2d8e2
+        }
+        .ant-row > div:first-child { 
+            border-left: none;
+        }
+        .meta {
+            color: #95989e;
+        }
+    }
+    .top-10 {
+        height: 250px;
+        width: 300px;
+    }
+    .line-chart, .pie-chart{
+        height: 400px;
+    }
+}

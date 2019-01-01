@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Advertiser:</strong>
+  <%= @report.advertiser %>
+</p>
+
+<p>
+  <strong>Campaign:</strong>
+  <%= @report.campaign %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @report.date %>
+</p>
+
+<p>
+  <strong>Impressions:</strong>
+  <%= @report.impressions %>
+</p>
+
+<p>
+  <strong>Clicks:</strong>
+  <%= @report.clicks %>
+</p>
+
+<p>
+  <strong>Installs:</strong>
+  <%= @report.installs %>
+</p>
+
+<p>
+  <strong>Cost micros:</strong>
+  <%= @report.cost_micros %>
+</p>
+
+<%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>

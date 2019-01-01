@@ -1,0 +1,48 @@
+version: '3'
+services:
+  mysql:
+    image: mysql
+    environment:
+      - MYSQL_DATABASE=applift
+      - MYSQL_USER=fayez
+      - MYSQL_PASSWORD=secret
+      - MYSQL_ROOT_PASSWORD=root@300
+    volumes:
+      - ./applift.sql:/docker-entrypoint-initdb.d/applift.sql
+      - ./db:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  backend:
+    build: ./backend
+    command: bundle exec rails s -p 3001 -b '0.0.0.0'
+    volumes:
+      - ./backend:/rubyapp
+    ports:
+      - "3001:3001"
+    links:
+      - mysql:mysql
+    depends_on:
+      - mysql
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/usr/app
+
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/nginx.conf
+    links:
+      - backend
+      - frontend
+    ports:
+      - "80:80"
+volumes:
+  db:
+    driver: "local"

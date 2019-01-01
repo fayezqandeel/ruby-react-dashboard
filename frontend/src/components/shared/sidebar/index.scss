@@ -1,0 +1,78 @@
+#sidebar-area{
+    .user-meta-data {
+        h3 {
+            margin: 0px;
+            color: #474954;
+        }
+        div.role-holder {
+            color: #b5bccb;
+            font-size:  14px;
+            margin-bottom: 8px;
+        }
+        .ant-tag {
+            border: 1px solid #1890ff;
+            color: #1890ff;
+            background: #fff;
+        }
+        .ant-badge-status-success {
+            background-color: #00f394;
+            width: 8px;
+            height: 8px;
+        }
+        
+    }
+    .section-title {
+        color: #444650;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        margin-top: 32px;
+        font-weight: 700;
+    }
+    ul, li {
+        list-style-type: none;
+    }
+    ul {
+        margin: 0px;
+        padding: 0px;
+        li {
+            margin-bottom: 8px;
+            border-bottom: 1px solid transparent;
+            padding-left: 16px;
+            cursor: pointer;
+            line-height: 30px;
+            font-size: 16px;
+            &:hover {
+                border-bottom: 1px solid #1890ff;
+                a {
+                    color: #1890ff;
+                }
+            }
+            a {
+                color: #9a9fa9;
+                text-decoration: none;
+                &:hover {
+                    color: #1890ff;
+                }
+            }
+            .ant-badge { 
+                margin-left: 8px;
+                .ant-badge-count {
+                    background: #ff3451;
+                    height: 16px;
+                    border-radius: 8px;
+                    min-width: 16px;
+                    line-height: 16px;
+                    padding: 0 4px;
+                    font-size: 11px;
+                }
+            }
+        }
+        li.active {
+            background: #f3f3f3;
+            border-radius: 5px 0px 0px 5px;
+            a {
+                color: #1890ff;
+            }
+        }
+    }
+}

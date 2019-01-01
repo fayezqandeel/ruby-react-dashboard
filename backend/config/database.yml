@@ -1,0 +1,16 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  host: mysql
+  username: root
+  password: root@300
+  pool: 5
+
+development:
+  <<: *default
+  database: applift
+
+
+test:
+  <<: *default
+  database: myapp_test
