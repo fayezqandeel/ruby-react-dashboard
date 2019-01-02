@@ -5,7 +5,7 @@ WORKDIR /usr/app
 
 COPY package.json package.json
 
-RUN npm install --silent
+RUN npm install -qy --silent
 
 EXPOSE 3000
 

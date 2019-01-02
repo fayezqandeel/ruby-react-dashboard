@@ -1,7 +1,7 @@
 version: '3'
 services:
   mysql:
-    image: mysql
+    image: mysql:5.7
     environment:
       - MYSQL_DATABASE=applift
       - MYSQL_USER=fayez
@@ -28,6 +28,7 @@ services:
     build: ./frontend
     volumes:
       - ./frontend:/usr/app
+      - /usr/app/node_modules
 
     ports:
       - "3000:3000"
